@@ -27,3 +27,12 @@ end
 
 # dont forget to call the method:
 say_hello
+
+
+#give your method the ability to take in arguments
+
+def say_bye(thing_to_say)
+  puts thing_to_say
+end
+
+say_bye "ruby is awesome"
