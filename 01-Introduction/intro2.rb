@@ -1,15 +1,15 @@
-#String concatenation
+          #String concatenation
 #be mindful with single quotes you can use string interpolation
 first_name = "seif"
 last_name = "delta"
 puts first_name + " " + last_name
 
 
-#String interpolation
+          #String interpolation
 puts "My first name is #{first_name} and my is #{last_name}"
 
 
-#Methods, how to find them
+          #Methods, how to find them
 first_name.class
 "delta".class
 #will return the type of data structure
