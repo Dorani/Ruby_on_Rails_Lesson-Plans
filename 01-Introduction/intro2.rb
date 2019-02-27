@@ -25,6 +25,23 @@ first_name.methods
 age.to_s.class
 #this will switch the type of to a string and get the class on it
 
+full_name.length
+#will give you the entire length of the data type + spaces
+
+full_name.reverse
+#reverses the data type, notice how this can be used on both arrays and ints
+
+full_name.capitalize
+#caps first letter
+
+full_name.empty?
+#will check if this data type is empty, use ? on methods
+
+full_name.nil?
+#everything has some type of value so it will be false, even if its an empty String
+
+
+
 
 
 
