@@ -1,4 +1,4 @@
-#define a method to multiple 2 numbers
+#define a method to calc 2 numbers
 
 def multiply(num1,num2)
   num1.to_f * num2.to_f
