@@ -22,6 +22,7 @@ first_name.methods
 #after seeing all the methods on a data type
 #you can use one, and chain another method on top of it!
 
+          #Common Methods
 age.to_s.class
 #this will switch the type of to a string and get the class on it
 
@@ -40,16 +41,21 @@ full_name.empty?
 full_name.nil?
 #everything has some type of value so it will be false, even if its an empty String
 
+sentence = "welcome to the jungle"
+sentence.sub("the jungle", "utopia") #can use
+puts sentence
+#sub method, with substitute values from a datatype
+#first parameter is the sub items and the 2nd is the new values
 
 
 
+              #Variable Assigment
+first_name = "seif"
+new_first_name = first_name
+#pass by value and reference keep in mind that
+#if a var is pointing to another var, its pointing to that location in memory
 
 
 
-
-
-#Common Methods
-
-#Variable Assigment
 
 #Escaping
