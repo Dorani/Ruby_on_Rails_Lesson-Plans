@@ -24,3 +24,7 @@ a = (1..100).to_a.shuffle
 #loops through, and for each item, it will check if there are odd numbers
 #if there is it returns an array with those numbers
 a.select{|number|number.odd?}
+
+
+a.methods
+#check out all the methods associated with arrays and learn!
