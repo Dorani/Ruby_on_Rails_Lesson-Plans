@@ -75,3 +75,20 @@ else
 end
 #both evaluate to true so it should return hello
 #true or false will evaluate to true, see docs for me
+
+
+
+#----------------------------------------
+#Evaluate multiple conditions that fail:
+
+name = "seif"
+
+if name == "seif"
+  puts "welcome to the program, seif"
+elsif name == "jack"
+  puts "welcome to the program, sam"
+elsif name == "stacy"
+  puts "welcome to the program, stacy"
+else
+  puts "welcome to the program user"
+end
