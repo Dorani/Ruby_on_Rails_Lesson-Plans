@@ -12,3 +12,51 @@ if !true
 else
   puts "bye"
 end
+
+
+
+
+#----------------------------------------
+#Evaluate 2 conditions with and && :
+
+condition = true
+another_condition = true
+
+if condition && another_condition
+  puts "hello"
+else
+  puts "bye"
+end
+#both are true so it should return hello
+
+
+
+
+#----------------------------------------
+#Evaluate 2 conditions with and &&:
+
+condition = true
+another_condition = false
+
+if condition && another_condition
+  puts "hello"
+else
+  puts "bye"
+end
+#both evaluate to false so it should return bye
+
+
+
+#----------------------------------------
+#Evaluate 2 conditions with or ||:
+
+condition = true
+another_condition = false
+
+if condition || another_condition
+  puts "hello"
+else
+  puts "bye"
+end
+#both evaluate to true so it should return hello
+#true or false will evaluate to true, see docs for me
