@@ -31,3 +31,53 @@ x.to_a.shuffle
 z = x.to_a.shuffle
 z
 #by reasigning and holding it in memory, it works
+
+
+
+#Activity2
+#we can mutate the caller by using bang !
+
+y = (1..10).to_a
+y.reverse!
+y
+# and you will see a maintained reversed list on y
+
+
+#Activity3
+
+x = "a".."z"
+z = x.to_a
+z.length
+#creates a range of letters
+#gets the length
+
+z << 10
+#this will add the number 10 to the end list of letters
+
+z.last
+z.first
+#gets the last and first elements
+
+z.unshift("seif")
+#adds to the begining of the array
+
+z.include("seif")
+#will test to see if you have an item in your array
+
+z.push("new item")
+#adds new item to the array
+
+b = z.pop
+#last in first out
+#will remove the last item from z and store it in b
+
+str = z.join(-)
+#takes all the elements of the z array and
+#returns a string with dashes in between
+
+arr = str.split(-)
+#splits each item and
+#returns it back to an array where there is a -
+
+%w("hello world")
+#this command will just convert it to an array
