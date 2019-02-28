@@ -22,6 +22,27 @@ puts "If password is correct, you will get back the user object"
 
 attempts = 1
 while attempts < 4
-  puts "this will print"
+  print "Username: "
+  username = gets.chomp
+  print "Password: "
+  password = gets.chomp
+
+
+  #authentication
+  #compare each row to what is entered with a loop on users
+  #and some comparisons for validations
+  users.each do |user|
+    if user[:username] == username && user[:password] == password
+      puts user
+      break
+    else
+      puts "credentials were not correct"
+    end
+  end
+
+
+  puts "Press n to quit or any key to continue"
+  input = gets.chomp.downcase
+  break if input == "n"
   attempts += 1
 end
