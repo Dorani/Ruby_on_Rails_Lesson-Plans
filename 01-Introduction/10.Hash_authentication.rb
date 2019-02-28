@@ -46,3 +46,5 @@ while attempts < 4
   break if input == "n"
   attempts += 1
 end
+
+puts "You have exeeded the number of attempts" if attempts == 4
