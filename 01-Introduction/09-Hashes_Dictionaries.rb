@@ -51,3 +51,16 @@ myhash[:e] = 5
 
 #to update a hash property
 myhash[:c] = "seif"
+
+#how to display values, only if the value is a string
+myhash.select {
+  |key, value| value.is_a?(String)
+}
+#returns items from hash that have a string
+
+
+#how to remove values with strings from Hash
+myhash.each {
+  |key,value| myhash.delete(key)
+  if value.is_a?(String)
+}
