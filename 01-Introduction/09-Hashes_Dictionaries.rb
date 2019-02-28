@@ -24,4 +24,15 @@ puts car["color"]
 #Useful methods with hashes:
 
 #how to get only the keys in the hash:
+#returns an array
 car.keys
+
+#how to only get the values
+#returns an array
+car.values
+
+#looping through
+car.each do |key,value|
+  puts "the class for a key is #{key.class}
+  and the value is #{value.class}"
+end
