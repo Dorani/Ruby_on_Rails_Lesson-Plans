@@ -36,3 +36,18 @@ car.each do |key,value|
   puts "the class for a key is #{key.class}
   and the value is #{value.class}"
 end
+
+
+#how to add to a hash?
+
+myhash = {
+  :a => 1,
+  :b => 2,
+  :c => 3,
+  :d => 4
+}
+#to add a property to your hash
+myhash[:e] = 5
+
+#to update a hash property
+myhash[:c] = "seif"
