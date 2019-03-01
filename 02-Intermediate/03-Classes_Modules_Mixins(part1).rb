@@ -7,7 +7,7 @@
 # In popular hashing algorithm in MD5 - bcrypt
 # Creates a hash digest of the string as password
 
-
+#don't forget to 'gem install bcrypt'
 
 
 #obtained from the docs, require tech
