@@ -45,3 +45,14 @@ john = Student.new("john", "doe", "sdot", "sd@ie.com", "password2")
 
 puts seif
 puts john
+
+
+
+#OOP
+#How do objects actually interact with one and another:
+seif.last_name = john.last_name
+puts "The Seif object got altered"
+puts seif
+
+#taking the seif obj, last_name, and setting it to our john obj, last_name
+#this is the process of how objects interacts and design new objs
