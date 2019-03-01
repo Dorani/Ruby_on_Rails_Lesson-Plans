@@ -40,6 +40,8 @@ class Student
 
 end
 
+
+#Create the instances
 seif = Student.new("seif", "dorani", "sdot", "sd@ie.com", "password1")
 john = Student.new("john", "doe", "sdot", "sd@ie.com", "password2")
 
@@ -48,7 +50,7 @@ puts john
 
 
 
-#OOP
+#OOP: how to make the instances interact
 #How do objects actually interact with one and another:
 seif.last_name = john.last_name
 puts "The Seif object got altered"
