@@ -32,7 +32,9 @@ john = Student.new("john", "doe", "sdot", "sd@ie.com", "password2")
 
 
 #in order to use the methods from the toolkit on the instances
-#that i created you will need to add the following
+#that i created you will need to add require require_relative path of File
+#and you will need to include the module within the classe
+#then following line can work on your instances
 
 hashed_password = seif.create_hash_digest(seif.password)
 puts hashed_password
