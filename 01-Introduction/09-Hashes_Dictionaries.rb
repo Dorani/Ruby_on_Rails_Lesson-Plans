@@ -62,5 +62,5 @@ myhash.select {
 #how to remove values with strings from Hash
 myhash.each {
   |key,value| myhash.delete(key)
-  if value.is_a?(String)
+  if value.is_a(String)
 }

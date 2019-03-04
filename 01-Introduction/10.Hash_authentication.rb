@@ -4,7 +4,8 @@ users = [
   {username: "seif", password:"password1"},
   {username: "dan", password:"password2"},
   {username: "sam", password:"password3"},
-  {username: "stacy", password:"password4"}
+  {username: "stacy", password:"password4"},
+  {username: "carl", password:"password5"}
 ]
 #authentication
 #compare each row to what is entered with a loop on users
