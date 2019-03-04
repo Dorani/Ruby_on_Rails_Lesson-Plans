@@ -1,17 +1,17 @@
 module Crud
   require 'bcrypt'
   #creation method
-  def Crud.create_hash_digest(password)
+  def create_hash_digest(password)
     BCrypt::Password.create(password)
   end
 
   #verify method
-  def Crud.verify_hash_digest(password)
+  def verify_hash_digest(password)
     BCrypt::Password.new(password)
   end
 
   #hash passwords with salt tech
-  def Crud.create_secure_users(list_of_users)
+  def create_secure_users(list_of_users)
     list_of_users.each do |user_record|
       user_record[:password] = create_hash_digest(user_record[:password])
     end
@@ -20,7 +20,7 @@ module Crud
 
 
   #authenticate users
-  def Crud.authenticate_user(username, password, list_of_users)
+  def authenticate_user(username, password, list_of_users)
     list_of_users.each do |user_record|
       if user_record[:username] == username &&
         verify_hash_digest(user_record[:password]) == password
@@ -30,3 +30,6 @@ module Crud
     "Credentials are not correct"
   end
 end
+
+#self is a class method, it does not require
+#an instance of an obj to make it work

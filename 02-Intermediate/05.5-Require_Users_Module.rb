@@ -1,6 +1,7 @@
 require_relative '05-Users_Crud_Toolkit-Module(Part2)'
 
-
+# created a module with 4 methods, which we are calling our toolkit,
+# and in our program we were able to use it in our program file of 05.5
 
 #users data:
 users = [
