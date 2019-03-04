@@ -23,12 +23,13 @@ end
 
 
 # real purpose here will be to take in the users data
-# and execute my create_hash_digest method on each password field
+# and for each user execute my create_hash_digest method on each password field
 
 def create_secure_users(list_of_users)
   list_of_users.each do |user_record|
-    puts user_record[:password]
+    user_record[:password] = create_hash_digest(user_record[:password])
   end
+  list_of_users
 end
 
-create_secure_users(users)
+puts create_secure_users(users)
