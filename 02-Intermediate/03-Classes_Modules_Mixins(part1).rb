@@ -12,15 +12,17 @@
 
 #obtained from the docs, require tech
 require 'bcrypt'
-
+#create a var to hold the creation of a hashed version of 'my password' using salt
 my_password = BCrypt::Password.create("my password")
 #=> "$2a$12$K0ByB.6YI2/OYrB4fQOYLe6Tv0datUVf6VZ/2Jzwm879BW5K1cHey"
 puts my_password
-puts my_password.version              #=> "2a"
-puts my_password.cost                 #=> 12
-puts my_password == "my password"     #=> true
-puts my_password == "not my password" #=> false
+#we create a password using .create
 
 # my_password = BCrypt::Password.new("$2a$12$K0ByB.6YI2/OYrB4fQOYLe6Tv0datUVf6VZ/2Jzwm879BW5K1cHey")
 # my_password == "my password"     #=> true
 # my_password == "not my password" #=> false
+
+#The reason why this is cool is because now we can create
+#multiple instances with the create method of the same string
+#and everytime when you take the string and run this bcrypt::password create
+#with the addition of the salt it won't create the same string
