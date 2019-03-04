@@ -26,3 +26,13 @@ puts my_password
 #multiple instances with the create method of the same string
 #and everytime when you take the string and run this bcrypt::password create
 #with the addition of the salt it won't create the same string
+
+# Examples:
+my_password1 = BCrypt::Password.create("my password")
+#=> "$2a$12$K0ByB.6YI2/OYrB4fQOYLe6Tv0datUVf6VZ/2Jzwm879BW5K1cHey"
+puts my_password1
+
+
+my_password2 = BCrypt::Password.create("my password")
+#=> "$2a$12$K0ByB.6YI2/OYrB4fQOYLe6Tv0datUVf6VZ/2Jzwm879BW5K1cHey"
+puts my_password2
