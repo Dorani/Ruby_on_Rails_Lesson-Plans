@@ -36,3 +36,7 @@ puts my_password1
 my_password2 = BCrypt::Password.create("my password")
 #=> "$2a$12$K0ByB.6YI2/OYrB4fQOYLe6Tv0datUVf6VZ/2Jzwm879BW5K1cHey"
 puts my_password2
+
+#accorind to the above
+puts my_password == my_password1
+#will result in false because you can't compare it to a hashed version
