@@ -21,6 +21,10 @@ def verify_hash_digest(password)
   BCrypt::Password.new(password)
 end
 
+
+# real purpose here will be to take in the users data
+# and execute my create_hash_digest method on each password field
+
 def create_secure_users(list_of_users)
   list_of_users.each do |user_record|
     puts user_record[:password]
