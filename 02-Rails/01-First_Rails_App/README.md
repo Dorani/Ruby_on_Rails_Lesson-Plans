@@ -20,3 +20,8 @@
 
     - so lets build a route first
       - to see which routes we get out the box we can type "rake routes" in our terminal
+      - go to your routes.rb file inside of config
+      - get 'welcome/home' and send it where it needs to go to: 'welcome#home'
+      - now run rake routes
+      - we now have our get requests for this route.
+      - so now we need our controller
