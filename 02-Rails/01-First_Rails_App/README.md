@@ -10,3 +10,5 @@
       - Router handles the request and directs it to the appropriate controller
       - The controller either renders a view OR reaches out to the Model layer of your app, which communicates with the DB and gets info or adds info
       - The the model reaches back out to the controller with the rendered info in the view which the client finally sees
+
+      - Important folders: App and config
