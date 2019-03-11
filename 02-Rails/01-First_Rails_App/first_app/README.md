@@ -24,5 +24,13 @@ Things you may want to cover:
   - add a group for production and add the gems necessary for that
     - gem 'pg' and gem 'rails_12factor'
   - then run bundle install --without production
-  
+
+  - heroku login:
+    - enter email and password
+    - create an app in heroku for our local version
+    - make sure you are in your directory and type the following: 'heroku create'
+        - creates an app with a random app name
+
+    - now push your app to heroku
+
 * ...
