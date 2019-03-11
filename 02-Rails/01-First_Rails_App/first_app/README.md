@@ -22,4 +22,7 @@ Things you may want to cover:
 * Deployment instructions
   - Heroku does not support sqlite3, so we will need to move it down to group dev test area of our gemfile.
   - add a group for production and add the gems necessary for that
+    - gem 'pg' and gem 'rails_12factor'
+  - then run bundle install --without production
+  
 * ...
