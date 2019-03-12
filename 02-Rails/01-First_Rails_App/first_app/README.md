@@ -32,5 +32,8 @@ Things you may want to cover:
         - creates an app with a random app name
 
     - now push your app to heroku
+        - git push heroku master
+        - if you want to rename your app type in:
+          - heroku rename 'app name'
 
 * ...
