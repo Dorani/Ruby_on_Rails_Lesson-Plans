@@ -11,3 +11,5 @@
         - take a look at the migration file and add:
             - t.string :title
             - this is ultimately a column in the table called title that is type of string
+        - once saved, go into the console and type in:
+            - rails db:migrate to initiate migration of the new database attributes
