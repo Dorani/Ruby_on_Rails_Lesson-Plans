@@ -14,7 +14,14 @@
         - once saved, go into the console and type in:
             - rails db:migrate to initiate migration of the new database attributes
 
-        - this creates a shema and seeds file:
+        - this creates a schema and seeds file:
           - we have an articles table with string title
 
   - if you want to start from scratch and update the migration file just type in "rails db:rollback"
+
+  - added columms without using rails db:rollback and essentially used "rails generate migration add_description_to_articles" and then manually added the changes in the migration file before running "rails db migrate"
+
+  - now the schema should have all correct info
+
+  - now we need to communicate with the table:
+      - create the model
