@@ -41,19 +41,19 @@
                 - you should all the data types associated with your attributes and details
                 - now type "Article" and you should see all the attributes with null values
                 - now to add to it we simple create a new instance article and make it equal to the Article model with the new method attached:
-                      - article = Article.new
+                      ```- article = Article.new
                       - article.title = "my first article"
-                      - article.description = "my first review"
+                      - article.description = "my first review"```
                 - then you need to save this to the db:
-                    - article.save:
+                    ```- article.save:```
                       - which generates a sql query which handles this transaction, injects all the values and commits it to the table.
                 - now if you type Article.all you should see the single instances added.
 
             - another way would be like this:
-                - article = Article.new(title: "new title alert", description: "new review alerts on deck")
+              ```  - article = Article.new(title: "new title alert", description: "new review alerts on deck")```
 
             - another way:
-                - Article.create(title: "one more for the mind", description: "new reviews are here!")
+              ```  - Article.create(title: "one more for the mind", description: "new reviews are here!")```
                   - this will create, insert and save all at once!
 
 ### Editing and Deleting
@@ -63,13 +63,15 @@
       - article = Article.find(2) => this grabs the second article
       - article.title = "updates to article" => here we specify which attribute of the article obj we want to edit
       - article.save => save the updates made for the particlular id of articles
-      
+
       ```
 
 
  - in order to delete/destroy an article, we need to grab the article first:
+ ```
     - article = Article.find(3)
     - article.destroy
+```
       - this will delete from articles table where id = 3
 
 ## Data Integrity
@@ -77,9 +79,10 @@
 ### Validation That Enforce Constraints:
 
  - In our article.rb file in the model directory we need to force a Validation on all the attributes that require inputs. So before the object I create hits the DB, it will ensure that it is in fact a tilte. Otherwise it will not save:
-    - validates :title, presence: true
+    ```- validates :title, presence: true```
         - if incorrect inputs were initiated then we get an error code => articles.errors.any? this will give you true
         - to know what those errors are you need to type the following:
           - article.erros.full_message and it will say "title can't be blank"
     - you can add more validation with amount of characters that are required to be inputed to really enforce:
-        - length: {minimum: 10, maximum: 300}
+
+        ```- length: {minimum: 10, maximum: 300}```
