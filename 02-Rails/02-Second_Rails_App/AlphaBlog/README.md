@@ -48,3 +48,5 @@
             - article = Article.new(title: "new title alert", description: "new review alerts on deck")
 
             - another way:
+            - Article.create(title: "one more for the mind", description: "new reviews are here!")
+              - this will create, insert and save all at once!
