@@ -56,7 +56,7 @@
                 - Article.create(title: "one more for the mind", description: "new reviews are here!")
                   - this will create, insert and save all at once!
 
-### Edit and Delete and Validation
+### Editing and Deleting
 
   - in order to edit an article, we need to first grab it:
       - article = Article.find(2) => this grabs the second article
