@@ -77,3 +77,5 @@
         - if incorrect inputs were initiated then we get an error code => articles.errors.any? this will give you true
         - to know what those errors are you need to type the following:
           - article.erros.full_message and it will say "title can't be blank"
+    - you can add more validation with amount of characters that are required to be inputed to really enforce:
+        - length: {minimum: 10, maximum: 300}
