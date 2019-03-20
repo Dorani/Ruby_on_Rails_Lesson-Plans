@@ -55,4 +55,4 @@
                 - Article.create(title: "one more for the mind", description: "new reviews are here!")
                   - this will create, insert and save all at once!
 
-### Updating and Deleting
+### Edit and Delete and Validation
