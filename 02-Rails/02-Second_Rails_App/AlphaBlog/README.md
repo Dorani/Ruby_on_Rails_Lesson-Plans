@@ -58,6 +58,12 @@
 ### Edit and Delete and Validation
 
   - in order to edit an article, we need to first grab it:
-      - article = Article.find(2) =>this grabs the second article
-      - article.title = "updates to article"
+      - article = Article.find(2) => this grabs the second article
+      - article.title = "updates to article" => here we specify which attribute of the article obj we want to edit
       - article.save => save the updates made for the particlular id of articles
+
+
+ - in order to delete/destroy an article, we need to grab the article first:
+    - article = Article.find(3)
+    - article.destroy
+      - this will delete from articles table where id = 3
