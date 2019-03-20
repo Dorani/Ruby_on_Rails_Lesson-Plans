@@ -47,9 +47,9 @@
                       - which generates a sql query which handles this transaction, injects all the values and commits it to the table.
                 - now if you type Article.all you should see the single instances added.
 
-                - another way would be like this:
+            - another way would be like this:
                 - article = Article.new(title: "new title alert", description: "new review alerts on deck")
 
-                - another way:
+            - another way:
                 - Article.create(title: "one more for the mind", description: "new reviews are here!")
                   - this will create, insert and save all at once!
