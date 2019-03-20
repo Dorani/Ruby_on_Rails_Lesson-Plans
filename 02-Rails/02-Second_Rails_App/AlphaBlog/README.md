@@ -31,3 +31,4 @@
       - with the magic of rails, just because we created the model => rails gives us getters an setters for the table attributes ie the columnms
       - we can test it out from the rails console:
           - the console gives you direct access to the DB
+          - can be used as a sandbox
