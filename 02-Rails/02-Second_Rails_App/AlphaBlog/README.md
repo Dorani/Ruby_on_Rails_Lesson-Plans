@@ -32,3 +32,14 @@
       - we can test it out from the rails console:
           - the console gives you direct access to the DB
           - can be used as a sandbox
+          - so to test it out type in Article:
+            - you should all the data types associated with your attributes and details
+            - now type Article and you should see all the attributes with null values
+            - now to add to it we simple create a new instance article and make it equal to the Article model with the new method attached:
+              - article = Article.new
+              - article.title = "my first article"
+              - article.description = "my first review"
+            - then you need to save this to the db:
+                - article.save:
+                  - which generates a sql query which handles this transaction, injects all the values and commits it to the table.
+            - now if you type Article.all you should see the single instances added.
