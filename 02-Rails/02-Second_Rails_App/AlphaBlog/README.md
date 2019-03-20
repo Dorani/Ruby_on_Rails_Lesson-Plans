@@ -23,9 +23,10 @@
   - added columms without using rails db:rollback and essentially used "rails generate migration add_description_to_articles" and then manually added the changes in the migration file before running "rails db migrate"
 
   - now the schema should have all correct info
-##Communicate with the DB
 
-  - now we need to communicate with the table:
+## Communicate with the DB
+
+  - we need to be able to get and set info to the tables:
       - create the model
       - under app
       - models, right click new file, article.rb
