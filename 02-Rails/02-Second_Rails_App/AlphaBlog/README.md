@@ -25,6 +25,7 @@
   - now the schema should have all correct info
 
 ## Communicate with the DB
+### Creating and Reading
 
   - we need to be able to get and set info to the tables:
       - create the model
@@ -53,3 +54,5 @@
             - another way:
                 - Article.create(title: "one more for the mind", description: "new reviews are here!")
                   - this will create, insert and save all at once!
+
+### Updating and Deleting
