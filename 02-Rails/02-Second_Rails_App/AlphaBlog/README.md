@@ -56,3 +56,8 @@
                   - this will create, insert and save all at once!
 
 ### Edit and Delete and Validation
+
+  - in order to edit an article, we need to first grab it:
+      - article = Article.find(2) =>this grabs the second article
+      - article.title = "updates to article"
+      - article.save => save the updates made for the particlular id of articles
