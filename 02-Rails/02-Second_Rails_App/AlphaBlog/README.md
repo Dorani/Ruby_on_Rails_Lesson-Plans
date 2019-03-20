@@ -59,9 +59,11 @@
 ### Editing and Deleting
 
   - in order to edit an article, we need to first grab it:
-      ```- article = Article.find(2) => this grabs the second article
+      ```
+      - article = Article.find(2) => this grabs the second article
       - article.title = "updates to article" => here we specify which attribute of the article obj we want to edit
       - article.save => save the updates made for the particlular id of articles
+      
       ```
 
 
