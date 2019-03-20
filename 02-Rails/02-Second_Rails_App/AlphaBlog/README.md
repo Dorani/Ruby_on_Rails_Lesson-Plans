@@ -67,3 +67,13 @@
     - article = Article.find(3)
     - article.destroy
       - this will delete from articles table where id = 3
+
+## Data Integrity
+
+### Validation That Enforce Constraints:
+
+ - In our article.rb file in the model directory we need to force a Validation on all the attributes that require inputs. So before the object I create hits the DB, it will ensure that it is in fact a tilte. Otherwise it will not save:
+    - validates :title, presence: true
+        - if incorrect inputs were initiated then we get an error code => articles.errors.any? this will give you true
+        - to know what those errors are you need to type the following:
+          - article.erros.full_message and it will say "title can't be blank"
