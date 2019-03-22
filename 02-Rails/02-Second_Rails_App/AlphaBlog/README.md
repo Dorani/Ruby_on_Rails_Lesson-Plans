@@ -99,3 +99,9 @@
   - 3rd once submit button is pushed that will go back to the controller and handled by the create action
     - the create action will take the attributes and white list them ie strong parameters
       - once white listed the creaet action will need to create a new instance varible with these tile and description values, then gets validated, then gets pushed to the DB and creates a new row
+
+
+### Add a Route
+
+  - config/routes.rb file => add ```resources :articles```
+      - gives us a new article path, a post to create articles, an edit article path, patch to update articles, delete article path, show article path and index article path. All by using that line above
