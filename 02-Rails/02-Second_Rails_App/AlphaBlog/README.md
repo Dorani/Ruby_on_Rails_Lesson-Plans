@@ -89,9 +89,13 @@
 
 
 
-
-
-
 # CRUD On The Browser
 
 ## Lifecyle of an Article
+
+  - 1st we need to initiate an instance variable with the @ sign and it takes place in article controller
+  ```@ article = Article.new ```
+  - 2nd add the attributes like the title and description which we will be getting from our form,  at a particlular path, then a submit button
+  - 3rd once submit button is pushed that will go back to the controller and handled by the create action
+    - the create action will take the attributes and white list them ie strong parameters
+      - once white listed the creaet action will need to create a new instance varible with these tile and description values, then gets validated, then gets pushed to the DB and creates a new row
