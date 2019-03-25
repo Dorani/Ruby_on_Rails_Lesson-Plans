@@ -104,4 +104,13 @@
 ### Add a Route
 
   - config/routes.rb file => add ```resources :articles```
-      - gives us a new article path, a post to create articles, an edit article path, patch to update articles, delete article path, show article path and index article path. All by using that line above
+      - gives us a new article path, a post to create articles, an edit article path, patch to update articles, delete article path, show article path and index article path. All by using that line above.
+
+  - then we build articles controller
+    - controllers, create => articles_controller.rb
+    - articles_controller.rb where ArticlesController < ApplicationController
+  - then we need to build an article view:
+    - views/new folder and call it articles
+      - new file, new.html.erb
+      - create an article h1 tag
+      - and now the articles/new page should work
