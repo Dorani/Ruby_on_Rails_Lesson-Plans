@@ -108,7 +108,7 @@
 
   - then we build articles controller
     - controllers, create => articles_controller.rb
-    - articles_controller.rb where ArticlesController < ApplicationController
+    - articles_controller.rb where ```ArticlesController < ApplicationController```
   - then we need to build an article view:
     - views/new folder and call it articles
       - new file, new.html.erb
