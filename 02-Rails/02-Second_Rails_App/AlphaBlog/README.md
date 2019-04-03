@@ -106,14 +106,17 @@
   - config/routes.rb file => add ```resources :articles```
       - gives us a new article path, a post to create articles, an edit article path, patch to update articles, delete article path, show article path and index article path. All by using that line above.
 
-      - ```routes path HTTP verb link controller#action
+   ```
+      routes path HTTP verb link controller#action
       articles index articles GET /articles articles#index
       new article new_article GET /articles/new articles#new
       create article POST /articles articles#create
       edit article edit_article GET /articles/:id articles#edit
       update article PATCH /articles/:id articles#update
       show article article GET /articles/:id articles#show
-      delete article DELETE /articles/:id articles#destroy```
+      delete article DELETE /articles/:id articles#destroy
+
+  ```
 
   - then we build articles controller
     - controllers, create => articles_controller.rb
