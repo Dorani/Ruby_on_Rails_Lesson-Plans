@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action only: [:show, :edit, :update,:destroy]
 
   def new
     @article = Article.new
@@ -15,6 +16,10 @@ class ArticlesController < ApplicationController
       render 'new'
     end
 
+  end
+
+  def show
+    @article = Article.find(params[:id])
   end
 
 
