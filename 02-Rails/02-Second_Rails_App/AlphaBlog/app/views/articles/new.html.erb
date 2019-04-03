@@ -1,1 +1,9 @@
-<h1>Welcome to My articles Page</h1>
+<h1>Create an article</h1>
+
+<%= form_for @article do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+
+<% end %>
