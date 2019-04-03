@@ -125,7 +125,8 @@
       - and now the articles/new page should work
 
 
-    - To create articles controller with a new action, under app/controllers create a file named articles_controller.rb (snake case):
+- To create articles controller with a new action, under app/controllers create a file named articles_controller.rb (snake case):
+
 ```
     class ArticlesController < ApplicationController
 
@@ -137,7 +138,8 @@
 
     end
 ```
-    - To create a view, under app/views create a folder named articles and within it create a file named new.html.erb then fill in the following:
+- To create a view, under app/views create a folder named articles and within it create a file named new.html.erb then fill in the following:
+
 ```
     <h1>Create an article</h1>
 
@@ -167,7 +169,7 @@
 
     <% end %>
 ```
-    - Create action and private article_params method for string parameters in the articles controller (Note: This is not complete):
+- Create action and private article_params method for string parameters in the articles controller (Note: This is not complete):
 ```
     def create
 
