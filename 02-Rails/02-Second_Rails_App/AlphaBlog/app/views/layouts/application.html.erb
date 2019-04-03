@@ -8,6 +8,12 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <%# A way of display a message when the article gets created %>
+    <% flash.each do |name, msg| %>
+      <ul>
+        <li> <%= msg %> </li>
+      </ul>
+    <% end %>
 
   <body>
     <%= yield %>
