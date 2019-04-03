@@ -106,6 +106,15 @@
   - config/routes.rb file => add ```resources :articles```
       - gives us a new article path, a post to create articles, an edit article path, patch to update articles, delete article path, show article path and index article path. All by using that line above.
 
+      - ```routes path HTTP verb link controller#action
+      articles index articles GET /articles articles#index
+      new article new_article GET /articles/new articles#new
+      create article POST /articles articles#create
+      edit article edit_article GET /articles/:id articles#edit
+      update article PATCH /articles/:id articles#update
+      show article article GET /articles/:id articles#show
+      delete article DELETE /articles/:id articles#destroy```
+
   - then we build articles controller
     - controllers, create => articles_controller.rb
     - articles_controller.rb where ```ArticlesController < ApplicationController```
@@ -114,3 +123,67 @@
       - new file, new.html.erb
       - create an article h1 tag
       - and now the articles/new page should work
+
+
+    - To create articles controller with a new action, under app/controllers create a file named articles_controller.rb (snake case):
+```
+    class ArticlesController < ApplicationController
+
+    def new
+
+    @article = Article.new
+
+    end
+
+    end
+```
+    - To create a view, under app/views create a folder named articles and within it create a file named new.html.erb then fill in the following:
+```
+    <h1>Create an article</h1>
+
+    <%= form_for @article do |f| %>
+
+    <p>
+
+    <%= f.label :title %><br/>
+
+    <%= f.text_field :title %>
+
+    </p>
+
+    <p>
+
+    <%= f.label :description %><br/>
+
+    <%= f.text_area :description %>
+
+    </p>
+
+    <p>
+
+    <%= f.submit %>
+
+    </p>
+
+    <% end %>
+```
+    - Create action and private article_params method for string parameters in the articles controller (Note: This is not complete):
+```
+    def create
+
+    @article = Article.new(article_params)
+
+    @article.save
+
+    redirect_to article_path(@article)
+
+    end
+
+    private
+
+    def article_params
+
+    params.require(:article).permit(:title, :description)
+
+    end
+```
