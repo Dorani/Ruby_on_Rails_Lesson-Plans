@@ -1,0 +1,6 @@
+<%# A way of display a message when the article gets created %>
+  <% flash.each do |name, msg| %>
+    <ul>
+      <li> <%= msg %> </li>
+    </ul>
+  <% end %>
