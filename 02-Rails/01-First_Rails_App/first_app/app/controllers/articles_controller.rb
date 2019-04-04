@@ -17,6 +17,10 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def edit
+    
+  end
+
   # GET /articles/1/edit
   def edit
   end
