@@ -101,7 +101,7 @@
       - once white listed the creaet action will need to create a new instance varible with these tile and description values, then gets validated, then gets pushed to the DB and creates a new row
 
 
-### Add a Route
+### Create New Articles from UI
 
   - config/routes.rb file => add ```resources :articles```
       - gives us a new article path, a post to create articles, an edit article path, patch to update articles, delete article path, show article path and index article path. All by using that line above.
@@ -201,7 +201,7 @@
 
 
 
-- Completed create action in articles controller:
+### Complete New and Show Actions :
 ```
 def create
 
@@ -270,6 +270,7 @@ Description: <%= @article.description %>
 </p>
 ```
 
+### Edit Articles
   - Route for editing articles takes the form ->
 
 ```/articles/:id/edit```
