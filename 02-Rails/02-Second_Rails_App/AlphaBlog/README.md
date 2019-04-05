@@ -406,17 +406,17 @@ end
 ```
 <h1>Showing selected article</h1>
 
-<p>
+  <p>
 
-Title: <%= @article.title %>
+    Title: <%= @article.title %>
 
-</p>
+  </p>
 
-<p>
+  <p>
 
-Description: <%= @article.description %>
+    Description: <%= @article.description %>
 
-</p>
+  </p>
 
 <%= link_to "Edit this article", edit_article_path(@article) %> |
 
@@ -431,19 +431,20 @@ Description: <%= @article.description %>
 ### Destroy and Partials
 
    - Add this link to the homepage (root route) so you can access the blog from the homepage:
-```
-<%= link_to "Alpha Blog", articles_path %>
-```
+
+  ```
+  <%= link_to "Alpha Blog", articles_path %>
+  ```
 
   - Under app/views/layouts folder create a _messages.html.erb file (messages partial) and remove the following code from application.html.erb to this file:
 ```
 <% flash.each do |name, msg| %>
 
-<ul>
+  <ul>
 
-<li><%= msg %></li>
+    <li><%= msg %></li>
 
-</ul>
+  </ul>
 
 <% end %>
 ```
@@ -459,41 +460,41 @@ Description: <%= @article.description %>
 
 <h2>The following errors prevented the article from getting created</h2>
 
-<ul>
+  <ul>
 
-<% @article.errors.full_messages.each do |msg| %>
+  <% @article.errors.full_messages.each do |msg| %>
 
-<li><%= msg %></li>
+  <li><%= msg %></li>
 
-<% end %>
+  <% end %>
 
-</ul>
+  </ul>
 
 <% end %>
 
 <%= form_for @article do |f| %>
 
-<p>
+  <p>
 
-<%= f.label :title %><br/>
+    <%= f.label :title %><br/>
 
-<%= f.text_field :title %>
+    <%= f.text_field :title %>
 
-</p>
+  </p>
 
-<p>
+  <p>
 
-<%= f.label :description %><br/>
+    <%= f.label :description %><br/>
 
-<%= f.text_area :description %>
+    <%= f.text_area :description %>
 
-</p>
+  </p>
 
-<p>
+  <p>
 
-<%= f.submit %>
+    <%= f.submit %>
 
-</p>
+  </p>
 
 <% end %>
 
@@ -509,13 +510,13 @@ Description: <%= @article.description %>
 ```
 def destroy
 
-@article = Article.find(params[:id])
+  @article = Article.find(params[:id])
 
-@article.destroy
+  @article.destroy
 
-flash[:notice] = "Article was successfully deleted"
+  flash[:notice] = "Article was successfully deleted"
 
-redirect_to articles_path
+  redirect_to articles_path
 
 end
 ```
