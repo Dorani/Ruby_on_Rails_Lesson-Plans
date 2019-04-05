@@ -139,11 +139,11 @@
 ```
     class ArticlesController < ApplicationController
 
-    def new
+      def new
 
-    @article = Article.new
+      @article = Article.new
 
-    end
+      end
 
     end
 ```
@@ -154,27 +154,27 @@
 
     <%= form_for @article do |f| %>
 
-    <p>
+      <p>
 
-    <%= f.label :title %><br/>
+        <%= f.label :title %><br/>
 
-    <%= f.text_field :title %>
+        <%= f.text_field :title %>
 
-    </p>
+      </p>
 
-    <p>
+      <p>
 
-    <%= f.label :description %><br/>
+        <%= f.label :description %><br/>
 
-    <%= f.text_area :description %>
+        <%= f.text_area :description %>
 
-    </p>
+      </p>
 
-    <p>
+      <p>
 
-    <%= f.submit %>
+        <%= f.submit %>
 
-    </p>
+      </p>
 
     <% end %>
 ```
@@ -182,19 +182,19 @@
 ```
     def create
 
-    @article = Article.new(article_params)
+      @article = Article.new(article_params)
 
-    @article.save
+      @article.save
 
-    redirect_to article_path(@article)
+      redirect_to article_path(@article)
 
     end
 
     private
 
-    def article_params
+      def article_params
 
-    params.require(:article).permit(:title, :description)
+      params.require(:article).permit(:title, :description)
 
     end
 ```
@@ -205,19 +205,19 @@
 ```
 def create
 
-@article = Article.new(article_params)
+  @article = Article.new(article_params)
 
-if @article.save
+  if @article.save
 
-flash[:notice] = "Article was successfully created"
+    flash[:notice] = "Article was successfully created"
 
-redirect_to article_path(@article)
+    redirect_to article_path(@article)
 
-else
+  else
 
-render 'new'
+    render 'new'
 
-end
+  end
 
 end
 ```
@@ -225,11 +225,11 @@ end
 ```
 <% flash.each do |name, msg| %>
 
-<ul>
+  <ul>
 
-<li><%= msg %></li>
+    <li><%= msg %></li>
 
-</ul>
+  </ul>
 
 <% end %>
 ```
@@ -241,11 +241,11 @@ end
 
 <ul>
 
-<% @article.errors.full_messages.each do |msg| %>
+  <% @article.errors.full_messages.each do |msg| %>
 
-<li><%= msg %></li>
+    <li><%= msg %></li>
 
-<% end %>
+  <% end %>
 
 </ul>
 
@@ -262,12 +262,12 @@ end
 ```
 <h1>Showing selected article</h1>
 
-<p>
-Title: <%= @article.title %>
-</p>
-<p>
-Description: <%= @article.description %>
-</p>
+  <p>
+    Title: <%= @article.title %>
+  </p>
+  <p>
+    Description: <%= @article.description %>
+  </p>
 ```
 
 ### Edit Articles
@@ -277,29 +277,29 @@ Description: <%= @article.description %>
 
   - Edit action in the articles controller:
 ```
-def edit
+  def edit
 
-@article = Article.find(params[:id])
+    @article = Article.find(params[:id])
 
-end
+  end
 ```
   - Update action in the articles controller:
 ```
 def update
 
-@article = Article.find(params[:id])
+  @article = Article.find(params[:id])
 
-if @article.update(article_params)
+  if @article.update(article_params)
 
-flash[:notice] = "Article was successfully updated"
+    flash[:notice] = "Article was successfully updated"
 
-redirect_to article_path(@article)
+    redirect_to article_path(@article)
 
-else
+  else
 
-render 'edit'
+    render 'edit'
 
-end
+  end
 
 end
 ```
@@ -313,11 +313,11 @@ end
 
 <ul>
 
-<% @article.errors.full_messages.each do |msg| %>
+  <% @article.errors.full_messages.each do |msg| %>
 
-<li><%= msg %></li>
+    <li><%= msg %></li>
 
-<% end %>
+  <% end %>
 
 </ul>
 
@@ -325,27 +325,27 @@ end
 
 <%= form_for @article do |f| %>
 
-<p>
+  <p>
 
-<%= f.label :title %><br/>
+    <%= f.label :title %><br/>
 
-<%= f.text_field :title %>
+    <%= f.text_field :title %>
 
-</p>
+  </p>
 
-<p>
+  <p>
 
-<%= f.label :description %><br/>
+    <%= f.label :description %><br/>
 
-<%= f.text_area :description %>
+    <%= f.text_area :description %>
 
-</p>
+  </p>
 
-<p>
+  <p>
 
-<%= f.submit %>
+    <%= f.submit %>
 
-</p>
+  </p>
 
 <% end %>
 ```
