@@ -550,5 +550,5 @@ bundle install --without production
 ```
   - Add the following line to your application.js file in the app/assets/javascripts folder under the line that says //= require jquery_ujs:
 ```
-//= require bootstrap-sprockets
+require bootstrap-sprockets
 ```
