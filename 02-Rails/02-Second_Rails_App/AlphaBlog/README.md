@@ -154,26 +154,20 @@
 
     <%= form_for @article do |f| %>
 
-      <p>
+        <p>
+          <%= f.label :title %><br/>
 
-        <%= f.label :title %><br/>
+          <%= f.text_field :title %>
+        </p>
 
-        <%= f.text_field :title %>
+        <p>
+          <%= f.label :description %><br/>
 
-      </p>
-
-      <p>
-
-        <%= f.label :description %><br/>
-
-        <%= f.text_area :description %>
-
-      </p>
+          <%= f.text_area :description %>
+        </p>
 
       <p>
-
         <%= f.submit %>
-
       </p>
 
     <% end %>
@@ -226,9 +220,7 @@ end
 <% flash.each do |name, msg| %>
 
   <ul>
-
     <li><%= msg %></li>
-
   </ul>
 
 <% end %>
@@ -312,13 +304,11 @@ end
 <h2>The following errors prevented the article from getting created</h2>
 
 <ul>
-
   <% @article.errors.full_messages.each do |msg| %>
 
     <li><%= msg %></li>
 
   <% end %>
-
 </ul>
 
 <% end %>
@@ -326,25 +316,19 @@ end
 <%= form_for @article do |f| %>
 
   <p>
-
     <%= f.label :title %><br/>
 
     <%= f.text_field :title %>
-
   </p>
 
   <p>
-
     <%= f.label :description %><br/>
 
     <%= f.text_area :description %>
-
   </p>
 
   <p>
-
     <%= f.submit %>
-
   </p>
 
 <% end %>
@@ -407,15 +391,11 @@ end
 <h1>Showing selected article</h1>
 
   <p>
-
     Title: <%= @article.title %>
-
   </p>
 
   <p>
-
     Description: <%= @article.description %>
-
   </p>
 
 <%= link_to "Edit this article", edit_article_path(@article) %> |
