@@ -26,6 +26,7 @@
   - now the schema should have all correct info
 
 ## Communicate with the DB
+
 ### Creating and Reading
 
   - we need to be able to get and set info to the tables:
@@ -140,9 +141,7 @@
     class ArticlesController < ApplicationController
 
       def new
-
       @article = Article.new
-
       end
 
     end
@@ -177,9 +176,7 @@
     def create
 
       @article = Article.new(article_params)
-
       @article.save
-
       redirect_to article_path(@article)
 
     end
@@ -204,7 +201,6 @@ def create
   if @article.save
 
     flash[:notice] = "Article was successfully created"
-
     redirect_to article_path(@article)
 
   else
