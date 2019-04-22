@@ -13,19 +13,21 @@
  */
 
 
+
+ $navbar-default-bg: red;
+
  @import "bootstrap";
 
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
 
- #logo {
-   float: left;
-   font-size: 2em;
-   color: #fff;
-   text-transform: lowercase;
-   letter-spacing: -1px;
-   font-weight: bold;
- }
-
- #logo:hover {
+#logo:hover {
   color: #fff;
   text-decoration: none;
 }
