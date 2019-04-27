@@ -1,17 +1,17 @@
 
 
-<% if @article.errors.any? %>
+<% if obj.errors.any? %>
   <div class="row">
     <div class="col-xs-10 col-xs-offset-2">
       <div class="card border-danger">
         <div class="card-heading text-danger">
           <h2 class="card-title text-danger">
-            <%= pluralize(@article.errors.count, "error") %>
+            <%= pluralize(obj.errors.count, "error") %>
             prohibited this article from being saved:
           </h2>
           <div class="card-body text-danger">
             <ul>
-              <% @article.errors.full_messages.each do |msg| %>
+              <% obj.errors.full_messages.each do |msg| %>
                 <li> <%= msg %></li>
               <% end %>
             </ul>
