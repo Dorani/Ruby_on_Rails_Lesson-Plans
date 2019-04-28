@@ -1,15 +1,20 @@
-<h2 align="center">Title: <%= @article.title %></h2>
-<hr>
-<div class="well col-xs-8 col-xs-offset-2">
-  <h4 class="center"><strong>Description</strong></h4>
+<h2 align="center">Comprehensive Information:</h2>
 
-  <%= @article.description %>
+
+
+<div class="card">
+  <div class="card-header">
+    Article Breakdown
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Title: <%= @article.title %></h5>
+    <h5 class="card-text">Description: <%= @article.description %></h5>
+
+    <div class="btn">
+      <%= link_to "Edit this Article", edit_article_path(@article) %> ||
+      <%= link_to "Back to articles listing", articles_path %>
+   </div>
+
+
+  </div>
 </div>
-
-
-
-
-
-
-<%= link_to "Edit this Article", edit_article_path(@article) %> |
-<%= link_to "Back to articles listing", articles_path %>
