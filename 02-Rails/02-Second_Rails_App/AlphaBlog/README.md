@@ -982,3 +982,51 @@ prohibited this article from being saved:
 
 <% end %>
 ```
+
+## Style Show View
+
+  - Articles show page, show.html.erb:
+```
+<h2 align="center">Title: <%= @article.title %></h2>
+
+<div class="well col-xs-8 col-xs-offset-2">
+
+<h4 class="center description"><strong>Description:</strong></h4>
+
+<hr>
+
+<%= simple_format(@article.description) %>
+
+<div class="article-actions">
+
+<%= link_to "Edit this article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
+
+<%= link_to "Delete this article", article_path(@article), method: :delete,
+
+data: { confirm: "Are you sure you want to delete the article?"},
+
+class: "btn btn-xs btn-danger" %>
+
+<%= link_to "View all articles", articles_path, class: "btn btn-xs btn-success" %>
+
+</div>
+
+</div>
+
+Add the following classes to custom.css.scss page:
+
+.article-actions {
+
+border-top: 1px solid #eaeaea;
+
+padding-top: 5px;
+
+}
+
+.description {
+
+margin-top: 0;
+
+}
+
+```
