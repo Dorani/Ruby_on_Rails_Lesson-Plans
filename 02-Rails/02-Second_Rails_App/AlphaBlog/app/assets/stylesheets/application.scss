@@ -55,6 +55,21 @@
   text-align: center;
 }
 
+.card-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.card-text {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.card-text p {
+  text-decoration: remove;
+}
 footer {
   margin-top: 45px;
   padding-top: 5px;
