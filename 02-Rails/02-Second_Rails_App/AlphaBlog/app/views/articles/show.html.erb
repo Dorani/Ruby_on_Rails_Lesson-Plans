@@ -11,10 +11,13 @@
     <h5 class="card-text">Description: <p><%= simple_format(@article.description) %></p></h5>
 
     <div class="article-actions">
-      <%= link_to "Edit this Article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
-      <%= link_to "Delete Article", article_path(@article), method: :delete,
-          data: {confirm: "Are you sure you want to delete?"},
-          class: "btn btn-xs btn-danger" %>
+     <%= link_to "Edit this Article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>
+     <%= link_to "Delete Article", article_path(@article), method: :delete,
+         data: {confirm: "Are you sure you want to delete?"},
+         class: "btn btn-xs btn-danger" %>
+     <%= link_to "View All Articles", articles_path, class: "btn btn-xs btn-success" %>
+
+
    </div>
 
 
