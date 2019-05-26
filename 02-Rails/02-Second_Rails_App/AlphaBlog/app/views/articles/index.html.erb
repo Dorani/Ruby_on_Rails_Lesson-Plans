@@ -11,7 +11,11 @@
     <div class="card-body">
       <h5 class="card-title">Title: <%= link_to articles.title, article_path(articles) %></h5>
       <h5 class="card-text">Description: <p><%= simple_format(articles.description) %></p></h5>
-
+      <small>
+        Created by: <%= articles.user.username if articles.user %>,
+        <%= time_ago_in_words(articles.create_at) || Time.now %> ago,
+        last updated: <%= time_ago_in_words(articles.updated_at) || Time.now %> ago
+      </small>
       <div class="article-actions">
         <%= link_to "Edit this Article", edit_article_path(articles), class: "btn btn-xs btn-primary" %>
         <%= link_to "Delete Article", article_path(articles), method: :delete,
