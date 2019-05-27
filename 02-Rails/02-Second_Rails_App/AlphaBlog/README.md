@@ -1251,7 +1251,7 @@ last updated: <%= time_ago_in_words(article.updated_at) %> ago</small>
 ```
 
   - And then add styling to a new article-meta-details class in the custom.css.scss page under the app/assets/stylesheets folder:
-  
+
 ```
 .article-meta-details {
 
@@ -1260,4 +1260,46 @@ border-top: 1px solid #eaeaea;
 margin-top: 15px;
 
 }
+```
+
+
+## Add Secure Password
+
+  - To create a migration to add password_digest column to users table:
+```
+rails generate migration add_password_digest_to_users
+```
+
+  - Then pull up the migration file and fill in the column details within the def change block:
+```
+add_column :users, :password_digest, :string
+```
+
+  - Then save the file and run rake db:migrate to make the change to the table
+
+  - In the model file (user.rb) add the following method:
+```
+has_secure_password
+```
+
+  - In the gemfile add the gem:
+```
+gem 'bcrypt', '~> 3.1.12'
+```
+
+  - Run the following from the command line:
+```
+bundle install
+```
+
+  - Test it out from the rails console by creating a couple of test users and updating password for an existing user
+
+  - To authenticate and test password for a user, first grab the user:
+```
+user = User.last # (or User.find(enter id of user here))
+
+user.authenticate("providecorrectpassword") # This will return the user object
+
+user.authenticate("enterincorrectpassword") # This will return false
+
 ```
