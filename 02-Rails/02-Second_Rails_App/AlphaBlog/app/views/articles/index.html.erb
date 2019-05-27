@@ -12,9 +12,9 @@
       <h5 class="card-title">Title: <%= link_to articles.title, article_path(articles) %></h5>
       <h5 class="card-text">Description: <p><%= simple_format(articles.description) %></p></h5>
       <small>
-        Created by: <%= articles.user.username if articles.user %>,
-        
-        last updated: <%= time_ago_in_words(articles.updated_at) %> ago
+        Created By:   <%= articles.user.username if articles.user %>,
+        Created At:   <%= time_ago_in_words(articles.created_at)  %> ago,
+        Last Updated: <%= time_ago_in_words(articles.updated_at) %> ago
       </small>
       <div class="article-actions">
         <%= link_to "Edit this Article", edit_article_path(articles), class: "btn btn-xs btn-primary" %>
