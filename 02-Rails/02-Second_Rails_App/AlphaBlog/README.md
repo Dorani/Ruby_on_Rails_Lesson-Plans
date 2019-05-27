@@ -1265,6 +1265,8 @@ margin-top: 15px;
 
 ## Add Secure Password
 
+![Test Image 1](user_auth.png)
+
   - To create a migration to add password_digest column to users table:
 ```
 rails generate migration add_password_digest_to_users
