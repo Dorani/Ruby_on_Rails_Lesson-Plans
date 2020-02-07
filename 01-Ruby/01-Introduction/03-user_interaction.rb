@@ -14,7 +14,7 @@ number = gets.chomp
 puts number.to_i * 2
 
 #this is important otherwise it will return the result of adding 2 strings
-#dont forget to conver to the appropriate data type
+#dont forget to convert to the appropriate data type
 
 
 #Quick activity:
