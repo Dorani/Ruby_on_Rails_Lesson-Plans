@@ -43,9 +43,9 @@ while attempts < 4
   authentication = auth_user(username,password, users)
   puts authentication
 
-  puts "Press n to quit or any key to continue"
+  puts "Press q to quit or any key to continue"
   input = gets.chomp.downcase
-  break if input == "n"
+  break if input == "q"
   attempts += 1
 end
 
